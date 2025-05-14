@@ -193,3 +193,23 @@
 
 
 }
+
+
+@media screen and (max-width: 768px){
+    .section-title{
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: 0; 
+        max-width: 100%;
+        word-break: none;
+        margin-top: 1rem;
+    }
+
+    .section-description, .section-description-five{
+        text-align: justify;
+        max-width: 100%;
+        word-break: none;
+
+    }
+
+}
