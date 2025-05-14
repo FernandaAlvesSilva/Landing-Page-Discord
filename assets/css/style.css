@@ -1,586 +1,200 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* geral styles */
-body{
-    background-color: #f0f0f0;
-    height: 100vh;
-}
-
-header{
-    width: 100%;
-    height: 35rem;
+:root {
+    --primary-bg-color: #f0f0f0;
+    --header-height: 35rem;
+    --footer-bg-color: #23272A;
+    --font-primary: 'Luckiest Guy', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --text-color-white: white;
+    --text-color-black: black;
+    --btn-radius: 5rem;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-header img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+/* Section 1 */
+
+.card_um{
+    border: none;
+    border-radius: 0;
 }
 
-footer{
-    background-color: #23272A;
-}
-
-section{
-    width: 100%;
-    height: 100%;
-}
-
-h1{
-    font-family: 'Luckiest Guy', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;   
-}
-
-h2{
-    font-family: 'Luckiest Guy', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;   
-}
-
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;   
-}
-
-/* inicio styles */
-
-/* header */
-
-.text, .btn{
-    position: absolute;
-}
-
-.text{
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-}
-
-.text h1{
-    margin: 1rem 0;
-    padding: 1rem;
+.card-title{
+    font-family: var(--font-primary);
     font-size: 3rem;
-}
-
-
-
-.btn{
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'opens sans', sans-serif;  
-    cursor: pointer;
-    display: flex;
-}
-
-.btn a{
-    text-decoration: none;
-    
-}
-
-.btn-download, .btn-open{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding:  1rem 2rem;
-    border-radius: 5rem;
-    margin: 0 1rem;
-}
-
-.btn-download{
-    color: black;
-    background-color: white;
-
-}
-
-
-.btn-open{
-    color: white;
-    background-color: black;
-}
-
-
-/* main */
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.section1{
-    background-color: white;
-    display: flex;
-    
-}
-
-.img1{
-    width: 100%;
-    height: 100%;
-    margin: 0 1rem;
-}
-
-.img1 img{
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-}
-
-.text1{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 0 1rem;
-    text-align: left;
-
-}
-
-.text1 h2{
-    max-width: 20rem;
-    word-break: break-word; 
-    margin: 1rem 5rem 1rem 0; /*top right bottom left*/
-    font-size: 2rem;
-    letter-spacing: 0.063rem;
-    line-height: 2.5rem;
-    font-weight: 300;
-    padding: 1rem;
-}
-
-.text1 p{
-    max-width: 40rem;
-    word-break: break-word;
-    margin: 1rem 5rem 1rem 0; 
-    padding: 2rem;
-
-}
-
-.section2{
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-
-.img2{
-    width: 100%;
-    height: 100%;
-    margin: 0 1rem;
-}
-
-.img2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-.text2{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 0 1rem;
-    text-align: left;
-    
-}
-
-.text2 h2{
-    max-width: 20rem;
-    word-break: break-word; 
-    margin: 1rem 5rem 1rem 0; /*top right bottom left*/
-    font-size: 2rem;
-    letter-spacing: 0.063rem;
-    line-height: 2.5rem;
-    font-weight: 300;
-    padding: 2rem;
-}
-
-.text2 p{
-    max-width: 40rem;
-    word-break: break-word;
-    margin: 1rem 5rem 1rem 0; 
-    padding: 2rem;
-}
-
-.section3{
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.img3{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img3 img{
-    width: 60%;
-    height: 60%;
-    object-fit: cover;
-}
-
-.text3{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.text3 h2{
-    max-width: 35rem;
-    word-break: break-word; 
-    margin: 1rem; /*top right bottom left*/
-    font-size: 2rem;
-    letter-spacing: 0.063rem;
-    line-height: 2.5rem;
-    font-weight: 300;
+    color: var(--text-color-white);
     text-align: center;
-    padding: 1rem;
-
 }
 
-.text3 p{
+
+.card-text{
+    font-family: var(--font-secondary);
+    font-size: .9rem;
+    color: var(--text-color-white);
+    text-align: center;
     max-width: 60rem;
     word-break: break-word;
+    margin: 0 auto;
 }
 
-
-/* footer */
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.btn-baixar{
+    background-color: var(--text-color-white);
+    color: var(--text-color-black);
+    
 }
 
-.logo{
-    padding: 1rem;
-    margin: 1rem;
-
+.btn-baixar:hover{
+    background-color: var(--text-color-black);
+    color: var(--text-color-white);
 }
 
-.logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.btn-windows{
+    background-color: var(--footer-bg-color);
+    color: var(--text-color-white);
 }
 
-.redes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 1rem;
-    gap: 1rem;
+.btn-windows:hover{
+    background-color: var(--text-color-white);
+    color: var(--footer-bg-color);
 }
-
-.redes a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-}
-
-
-.Desenvolvido{
-    color: white;
+ 
+.btn{
+    border: none;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 2rem;
     font-size: 1rem;
-    margin: 1rem;
+    margin-top: 1rem;
+    font-family: var(--font-secondary);
+}
+
+/* Section 2 e 4 */
+
+.section-title {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--text-color-black);
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.05rem; 
+    max-width: 20rem;
+    word-break: break-word; 
+}
+
+.section-description{
+    font-size: 1rem;
+    color: var(--text-color-black);
+    max-width: 25rem;
+    word-break: break-word;
+    margin-top: 1rem;
+}
+
+/* Section 3 */
+
+#section3, #section5{
+    background-color: var(--primary-bg-color)
+}
+
+.section-title-five{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--text-color-black);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.05rem; 
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-description-five{
+    font-size: 1rem;
+    color: var(--text-color-black);
+    max-width: 50rem;
+    word-break: break-word;
+    margin-top: 1rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
 
+/* Footer */
 
-/* media queries */
+.container-footer{
+    font-size: 1rem;
+}
+.container-footer a{
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
 
-@media (max-width: 1280px) {
+/* Media Queries */
 
-    header{
-        width: 100%;
-        height: 28.688rem;
-    }
-    
-    header img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    
-    .btn{
-        top: 50%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
+@media screen and (max-width: 428px){
+
+    .card_um{
+        height: 33.25rem;
     }
 
-    /* main */
-    
-    .img1{
-        width: 100%;
-        height: 100%;
-        margin: 0 1rem;
-    }
-    
-    .img1 img{
+    .card_um img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    
-    .text1 h2{
-        max-width: 20rem;
-        word-break: break-word; 
-        margin: 1rem 5rem 1rem 0; /*top right bottom left*/
-        padding: 1rem;
-    }
-    
-    .text1 p{
-        max-width: 40rem;
-        word-break: break-word;
-        margin: 1rem 5rem 1rem 0; 
-        padding: 1rem;
-    
-    }
-    
-  }
-  
-  @media (max-width:900px) {
-    header{
-        height: 30rem;
-    }
-
-    header img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .text{
-        top: 15%;
-    }
-
-    .text h1{
-        font-size: 2em;
-    }
-
-    .text p{
-        font-size: .9rem;
-    }
-
-    .btn{
-        top: 35%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .text1 h2{
-        max-width: 20rem;
-        word-break: break-word; 
-        margin: 1rem 0 1rem 0; /*top right bottom left*/
-        font-size: 1.5rem;
-        letter-spacing: 0.063rem;
-        line-height: 2.5rem;
-        font-weight: 300;
-        padding: 0;
-    }
-
-    .text1 p{
-        max-width: 40rem;
-        word-break: break-word;
-        margin: 1rem 0 1rem 0; 
-        padding: 0;
-    }
-
-    .img1{
-        margin: 3rem 0 3rem 0; /*top right bottom left*/
-    } 
-    
-    .img2{
-        margin: 3rem 0 3rem 0;
-    }
-
-    .text2{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        margin: 0 1rem;
+    .card-title, .card-text{
         text-align: left;
-        
-    }
-    
-    .text2 h2{
-        margin: 1rem; /*top right bottom left*/
-        padding: 1rem;
-    }
-    
-    .text2 p{
-        margin:  1rem; 
-        padding: 1rem;
-    }
-    
-    .text3 p{
-        max-width: 50rem;
-        margin: 1rem; /*top right bottom left*/
-        padding: 1rem;
-    }
-    
-    footer{
-        padding: 1rem;
+        margin: 1rem 0;
+
     }
 
-  }
-
-
-  @media (max-width: 428px) {
-
-    header{
-        width: 100%;
-        height: 30rem;
-    }
-
-    
-    .text{
-        top: 20%;
-        left: 50%;
-        width: 100%;
-        text-align: left;
-    }
-    
-    .text h1{
-        margin: 1rem;
-        padding: 0;
-        font-size: 2rem;
-    }
-
-    .text p{
+    .card-text{
+        text-align: justify;
         font-size: 1rem;
-        margin: 1rem;
-        padding: 0;
     }
 
     .btn{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
-        justify-content: center;
-        top: 45%;
+        margin: .3 auto;
     }
 
-    .btn-download, .btn-open{
-        width: 100%;
+    .section-title{
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: 0; 
+        max-width: 100%;
+        word-break: none;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .section-description{
+        text-align: justify;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .section-title-five{
+        font-size: 2rem;
         text-align: center;
-        margin: 0.5rem 0;
+        line-height: 1.2;
+        letter-spacing: 0; 
+        max-width: 100%;
+        word-break: none;
+        margin: 1rem auto;
+        padding: 1rem;
     }
 
-
-    .section1{
-        background-color: white;
-    }
-
-
-    .section1, .section2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .img1, .img2{
-        width: 100%;
-        height: 100%;
-        margin: 1rem;
-    }
-
-    .text1, .text2{
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-    }
-
-    .text1 h2, .text2 h2{
-        max-width: 30rem;
-        margin: 1rem; /*top right bottom left*/
-        font-size: 1.5rem;
-        letter-spacing: 0rem;
-        line-height: 1.5rem;
-        padding: 0;
-    }
-
-    .text1 p , .text2 p{
-        max-width: 30rem;
-        margin: 1rem; /*top right bottom left*/
-        padding: 0;
-    }
-
-    .img3{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-
-    .img3 img{
-        width: 80%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .text3{
-        margin: 1rem;
-    }
-
-    .text3 h2{
-        max-width: 30rem;
-        margin: 1rem; /*top right bottom left*/
-        font-size: 1.5rem;
-        letter-spacing: 0rem;
-        line-height: 1.5rem;
-        padding: 0;
-    }
-
-    .text3 p{
-        max-width: 30rem;
-        margin: 1rem; /*top right bottom left*/
-        padding: 0;
-    }
-
-
-    footer{
+    .section-description-five{
+        text-align: justify;
+        margin: 1rem auto;
         padding: 1rem;
     }
 
 
-    .logo{
-        width: 50%;
-        height: 50%;
-        margin: 0;
-    }
 
-    .redes{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        padding: 1rem;
-        gap: 1rem;
-    }
+}
+
+@media screen and (max-width: 1018px){
 
 
-  }
+}
